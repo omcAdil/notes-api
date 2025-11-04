@@ -2,7 +2,7 @@ package com.github.omcadil.notes_api.controller;
 
 import com.github.omcadil.notes_api.domain.dto.NoteRequest;
 import com.github.omcadil.notes_api.domain.dto.NoteResponse;
-import com.github.omcadil.notes_api.service.NoteService;
+import com.github.omcadil.notes_api.service.impl.NoteServiceImpl;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class NoteController {
 
-    private final NoteService noteService;
+    private final NoteServiceImpl noteService;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
